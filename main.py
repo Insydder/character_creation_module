@@ -1,6 +1,5 @@
 from random import randint
 
-
 from graphic_arts.start_game_banner import run_screensaver
 
 
@@ -26,8 +25,7 @@ def attack(char_name: str, char_class: str) -> str:
         return (
             f'{char_name} нанёс урон противнику равный'
             f'{5 + randint(-3, -1)}')
-    else:
-        return (f'{char_name} не нанес урон')
+    return (f'{char_name} не атаковал') 
 
 
 def defence(char_name: str, char_class: str) -> str:
@@ -46,8 +44,7 @@ def defence(char_name: str, char_class: str) -> str:
         return (f'{char_name} блокировал {10 + randint(-2, 2)} урона')
     if char_class == 'healer':
         return (f'{char_name} блокировал {10 + randint(2, 5)} урона')
-    else:
-        return (f'{char_name} не блокировал')
+    return (f'{char_name} не блокировал') 
 
 
 def special(char_name: str, char_class: str) -> str:
@@ -72,8 +69,7 @@ def special(char_name: str, char_class: str) -> str:
         return (
             f'{char_name} применил специальное умение'
             f'«Защита {10 + 30}»')
-    else:
-        return (f'{char_name} не применил специальное умение')
+    return (f'{char_name} не применил специальное умение') 
 
 
 def start_training(char_name: str, char_class: str) -> str:
